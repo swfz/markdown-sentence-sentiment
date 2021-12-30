@@ -1,0 +1,17 @@
+{
+  "name": "markdown-sentence-sentiment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/language": "^4.3.2",
+    "@textlint/markdown-to-ast": "^12.1.0",
+    "csv-writer": "^1.6.0"
+  }
+}
