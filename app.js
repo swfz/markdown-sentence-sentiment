@@ -5,8 +5,8 @@ const language = require('@google-cloud/language');
 
 // 計測対象のファイルを列挙する
 const files = [
-  { month: '2021-01', file: '/home/user/docs/release_notes/2021_02.md' },
-  { month: '2021-02', file: '/home/user/docs/release_notes/2021_03.md' },
+  { month: '2021-01', file: 'samples/sample1.md' },
+  { month: '2021-02', file: 'samples/sample2.md' },
 ];
 // 計測対象の文言を記述する(`## `で始まる段落)
 const titles = ['仕事', '生活'];
