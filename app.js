@@ -47,7 +47,7 @@ async function analyze(file, targetTitle) {
   console.log(`Sentiment score: ${sentiment.score}`);
   console.log(`Sentiment magnitude: ${sentiment.magnitude}`);
 
-  return sentiment;
+  return {...sentiment, length: text.length};
 }
 
 async function main() {
@@ -56,11 +56,11 @@ async function main() {
   for (title of titles) {
     for (line of files) {
       const result = await analyze(line.file, title);
-      data.push({month: line.month, type: title, score: result.score, magnitude: result.magnitude});
+      data.push({month: line.month, type: title, score: result.score, magnitude: result.magnitude, length: result.length});
     }
   }
 
-  const csvWriter = createCsvWriter({path: 'result.csv', header: ['month', 'type', 'score', 'magnitude']});
+  const csvWriter = createCsvWriter({path: 'result.csv', header: ['month', 'type', 'score', 'magnitude', 'length']});
   await csvWriter.writeRecords(data).then(() => {});
 }
 
