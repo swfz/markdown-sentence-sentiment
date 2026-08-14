@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@google-cloud/language": "^4.3.2",
+    "@google-cloud/language": "^7.0.0",
     "@textlint/markdown-to-ast": "^12.1.0",
     "csv-writer": "^1.6.0"
   }
